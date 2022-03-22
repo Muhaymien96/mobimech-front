@@ -4,9 +4,7 @@
 
 <script>
 export default {
-  name: 'About',
-  
-
+name: 'Mechanics'
 }
 </script>
 
