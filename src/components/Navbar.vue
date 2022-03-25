@@ -16,6 +16,9 @@
         <router-link class="nav-link"  :to="{name: 'Services'}">Services</router-link>
       </li>
        <li class="nav-item">
+        <router-link class="nav-link"  :to="{name: 'BookAService'}">Book A Service</router-link>
+      </li>
+       <li class="nav-item">
         <router-link class="nav-link"  :to="{name: 'Mechanics'}">Mechanics</router-link>
       </li>
       <li class="nav-item">

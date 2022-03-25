@@ -22,8 +22,7 @@
       <div class="col-sm-7">
     <p>
       Not a member?
-      <a href="/register">Create an account</a>
-    </p>
+<router-link :to="{name: 'Register'}">Create an account</router-link>    </p>
       </div>
     </div>
   </form>
@@ -39,7 +38,7 @@ export default {
   },
   methods: {
     login() {
-      fetch("https://mmpos-group-api.herokuapp.com/users", {
+      fetch("http://localhost:6644/users", {
         method: "PATCH",
         body: JSON.stringify({
           email: this.email,
@@ -63,7 +62,20 @@ export default {
   },
 };
 </script>
-<style scoped>
+<style lang="scss" scoped>
+//text color
+$primaryText: #021a49;
+$secondaryText: #171d24;
+$tertiaryText: #fff;
+//color theme
+$primaryBg: #00509d;
+$secondaryBg: #003f88;
+$tertiaryBg: #00296b;
+//fonts
+$primaryFont: "Poppins", sans-serif;
+$secondaryFont: "Rubik", sans-serif;
+//styling
+
 .border {
   border-radius: 20px;
   background: #f5f5f5;
@@ -99,11 +111,11 @@ export default {
   transition: all 0.1s linear;
   padding: 10px;
   border: none;
-  background: #f8ad9d;
+  background: $primaryBg;
   float: left;
 }
 .form-btn:hover {
-  background: #f4978e;
+  background: $tertiaryBg;
 }
 .col-sm-7 p {
   font-size: 1.1rem;
@@ -111,7 +123,7 @@ export default {
 }
 
 .col-sm-7 a {
-  color: #f8ad9d !important;
+  color: $primaryBg !important;
   transition: 00.2s;
 }
 .col-sm-7 a:hover {

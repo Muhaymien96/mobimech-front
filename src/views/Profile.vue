@@ -10,7 +10,7 @@
           />
           <br />
           <h2 class="name-member name mt-2 text-dark">
-            Name: {{ users.fullname }}
+            Name: {{ users.name }}
           </h2>
           <br />
           <h2 class="expertise-member expertise text-dark">
@@ -95,7 +95,7 @@ export default {
       alert("User not logged in");
       return this.$router.push({ name: "Login" });
     }
-    fetch("https://mmpos-group-api.herokuapp.com/users/single-user/", {
+    fetch("http://localhost:6644/users/:id/", {
       method: "GET",
       headers: {
         "Content-type": "application/json; charset=UTF-8",
@@ -117,7 +117,7 @@ export default {
         alert("User not logged in");
         return this.$router.push({ name: "Login" });
       }
-      fetch("https://mmpos-group-api.herokuapp.com/users/", {
+      fetch("http://localhost:6644/users/", {
         method: "PUT",
         body: JSON.stringify({
           fullname: this.name,
