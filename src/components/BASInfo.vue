@@ -23,8 +23,8 @@
       </button>
     </h2>
     <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-      <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
-    </div>
+      <div class="accordion-body"><input type="text" placeholder="Enter Your Address" id="autocomplete" v-model="address" required>
+          <button class="mx-4" @click="saveVehicle">Confirm Location</button></div></div>
   </div>
   <div class="accordion-item">
     <h2 class="accordion-header" id="flush-headingThree">
@@ -102,7 +102,7 @@ mounted(){
     )
 },
 saveAddress() {
-      fetch("http://localhost:6644/bookings", {
+      fetch("https://mobimech-api.herokuapp.com/bookings", {
         method: "POST",
         body: JSON.stringify({
           address: this.address,
@@ -120,6 +120,9 @@ saveAddress() {
           alert(err);
         });
     },
+    saveVehicle(){
+        
+    }
 
 }
 </script>

@@ -5,11 +5,11 @@
         <div class="text">
           <h2 class="main-text">Mobile mechanics that come to you</h2>
           <p class="sub-text">
-            Service at your home or office | Fair and transparent pricing |
+            Service at your home or office | Fair and transparent pricing | <br>
             6-month / 10 000km warranty
           </p>
         </div>
-        <button type="button" class="btn btn-outline-primary rounded-pill">Book A Service</button>
+        <button type="button" class="btn btn-outline-primary rounded-pill bas"><router-link :to="{name: 'BookAService'}">Book A Service</router-link></button>
       </div>
       <div class="col">
         <img class="car2" src="https://i.ibb.co/5KC3Y7y/car.png" alt="car2" />
@@ -77,9 +77,9 @@ $secondaryFont: "Rubik", sans-serif;
   font-family: $primaryFont;
   color: $tertiaryText;
 }
-.btn-outline-primary{
+.bas{
   font-weight: bold;
-background-color: $tertiaryText;
+background-color: $tertiaryText;  
 border-radius: 10px;
 width: 170px;
 height: 50px;
@@ -95,11 +95,14 @@ transition: 0.4s ease all;
 }
 
 }
+a:hover{
+  color: $tertiaryText;
+}
 
 .car2 {
-  margin-top: 50px !important;
-  height: 100%;
-  width: 100%;
+  margin-top: 45px !important;
+  height: 500px;
+  width: 800px;
 
   @media (max-width: 1000px) {
     display: none;

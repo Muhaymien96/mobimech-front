@@ -40,7 +40,7 @@
       />
       <div class="row">
         <div class="col-sm-5">
-          <button type="submit" class="form-btn">Sign up</button>
+          <button type="submit" class="btn btn-outline-primary rounded-pill">Sign up</button>
         </div>
         <div class="col-sm-7">
           <p>
@@ -77,7 +77,7 @@ export default {
 },
   methods: {
     register() {
-      fetch("http://localhost:6644/users", {
+      fetch("https://mobimech-api.herokuapp.com/users", {
         method: "POST",
         body: JSON.stringify({
           name: this.name,
@@ -162,17 +162,27 @@ $secondaryFont: "Rubik", sans-serif;
   padding: 20px;
 }
 
-.form-btn {
-  background: $primaryBg;
-  cursor: pointer;
+.btn-outline-primary{ 
+  color: $tertiaryText;
+border-radius: 10px;
+width: 170px;
+height: 50px;
+transition: 0.4s ease all;
+cursor: pointer;
   transition: all 0.1s linear;
   padding: 10px;
   border: none;
+  background: $primaryBg;
   float: left;
-}
 
-.form-btn:hover {
-  background: $tertiaryBg;
+
+
+&:hover{
+background-color: $tertiaryText;
+transition: 0.4s ease all;
+color: $primaryBg;
+border: $primaryBg 1px solid;
+}
 }
 
 .form-social-login {

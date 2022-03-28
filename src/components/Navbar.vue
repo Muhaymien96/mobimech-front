@@ -18,15 +18,22 @@
        <li class="nav-item">
         <router-link class="nav-link"  :to="{name: 'BookAService'}">Book A Service</router-link>
       </li>
+       <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Profile
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <router-link class="nav-link"  :to="{name: 'Dashboard'}">Dashboard</router-link>
+         <li> <router-link class="nav-link" :to="{name: 'Login'}">Sign in</router-link></li>
+           <li> <router-link class="nav-link" :to="{name: 'Login'}">Sign out</router-link></li>
+           <li> <router-link class="nav-link" :to="{name: 'Register'}">Register</router-link></li>
+
+          </ul>
+        </li>
        <li class="nav-item">
         <router-link class="nav-link"  :to="{name: 'Mechanics'}">Mechanics</router-link>
       </li>
-      <li class="nav-item">
-     <router-link class="nav-link" :to="{name: 'Dashboard'}">Dashboard</router-link>
-     </li>
-     <li class="nav-item float">
-          <router-link class="nav-link" :to="{name: 'Login'}"><i class="fa-solid fa-arrow-right-from-bracket"></i><i class="fa-solid fa-acorn"></i></router-link>
-          </li>
+       
     </ul>
   </div>
 </nav>
@@ -63,6 +70,7 @@ nav{
   color: $tertiaryText !important;
   font-family: $primaryFont;
   margin-left: 30px;
+  border-radius: 12px;
 }
  .navbar-brand{
   color: $tertiaryText !important;
@@ -80,7 +88,12 @@ top: 20px;
 right: 30px;
 }
 .nav-link:hover{
-
+background-color: $secondaryBg;
+border-radius: 12px;
+transition: 0.4s ease all;
+}
+.dropdown-menu{
+  background-color: $primaryBg;
 }
 
 </style>

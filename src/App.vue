@@ -24,4 +24,7 @@ $tertiaryBg : #00296b;
 $primaryFont: 'Poppins', sans-serif;
 $secondaryFont: 'Rubik', sans-serif;
 
+a{
+  text-decoration: none !important;
+}
 </style>

@@ -95,7 +95,7 @@ export default {
       alert("User not logged in");
       return this.$router.push({ name: "Login" });
     }
-    fetch("http://localhost:6644/users/:id/", {
+    fetch("https://mobimech-api.herokuapp.com/users/:id/", {
       method: "GET",
       headers: {
         "Content-type": "application/json; charset=UTF-8",
@@ -117,7 +117,7 @@ export default {
         alert("User not logged in");
         return this.$router.push({ name: "Login" });
       }
-      fetch("http://localhost:6644/users/", {
+      fetch("https://mobimech-api.herokuapp.com/users/", {
         method: "PUT",
         body: JSON.stringify({
           fullname: this.name,
