@@ -24,9 +24,9 @@
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             <router-link class="nav-link"  :to="{name: 'Dashboard'}">Dashboard</router-link>
-         <li> <router-link class="nav-link" :to="{name: 'Login'}">Sign in</router-link></li>
-           <li> <router-link class="nav-link" :to="{name: 'Login'}">Sign out</router-link></li>
-           <li> <router-link class="nav-link" :to="{name: 'Register'}">Register</router-link></li>
+         <li> <router-link class="nav-link" v-if="loggedin == false" :to="{name: 'Login'}">Sign in</router-link></li>
+           <li> <router-link class="nav-link" v-if="loggedin == true" :to="{name: 'Login'}">Sign out</router-link></li>
+           <li> <router-link class="nav-link" v-if="loggedin == false" :to="{name: 'Register'}">Register</router-link></li>
 
           </ul>
         </li>
@@ -41,6 +41,11 @@
 
 <script>
 export default {
+  data(){
+    return{
+      loggedin: false
+    }
+  }
 
 }
 </script>
